@@ -46,18 +46,24 @@
                     <li><a class="nav-link scrollto" href="/experience.html">Experience</a></li>
                     <li><a class="nav-link scrollto" href="/projects.html">Project</a></li>
                     <li><a class="nav-link scrollto" href="/skills.html">Skills</a></li>
-                    <li><a class="nav-link scrollto" href="/blog.html">Blog</a></li>
+                    <li><a class="nav-link scrollto" href="#">Blog</a></li>
                     <li><a class="nav-link scrollto" href="/contact.html">Hire Me</a></li>
+                    <li>
+                        <div class="form-check form-switch nav-link scrollto">
+                            <input type="checkbox" class="form-check-input" id="checkbox" onclick="setDarkMode()">
+                            <label class="custom-control-label mt-1" for="checkbox">Dark</label>
+                        </div>
+                    </li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle d-none"></i>
             </nav><!-- .navbar -->
 
         </div>
     </header><!-- End Header -->
-    
-    <section id="featured-services" class="featured-services ">
+
+    <section id="featured-services" class="featured-services">
         <div class="container">
-            <h1 class="text-dark text-center mb-5" style="font-size: 64px;">Skills</h1>
+            <h1 class="text-center mb-5" style="font-size: 64px;">Skills</h1>
             <div class="row gy-4">
 
                 <div class="col-lg-3 col-md-12 aos-init aos-animate text-center" data-aos="zoom-out">
@@ -193,7 +199,29 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+        //save to localstorage
+        if (localStorage.getItem('theme') == 'dark') {
+            setDarkMode();
 
+            if (document.getElementById('checkbox').checked) {
+                localStorage.setItem('checkbox', true)
+            }
+        }
+
+        function setDarkMode() {
+            let isDark = document.body.classList.toggle('darkmode');
+
+            if (isDark) {
+                setDarkMode.checked = true;
+                localStorage.setItem('theme', 'dark');
+                document.getElementById('checkbox').setAttribute('checked', 'checked');
+            } else {
+                setDarkMode.checked = true;
+                localStorage.removeItem('theme', 'dark');
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -571,6 +571,16 @@ section {
   padding: 120px 0 60px;
 }
 
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1B2430;
+}
+
+h4{
+  color: #2C3333;
+}
+
 .hero-animated h2 {
   margin: 0 0 10px 0;
   font-size: 48px;
@@ -3268,3 +3278,68 @@ section {
   background: var(--color-primary);
   text-decoration: none;
 }
+
+/* darkmode */
+.darkmode{
+  background-color: #1B2430;
+  color: #E7F6F2;
+}
+.darkmode h1{
+  color: #E7F6F2;
+}
+
+.darkmode h4{
+  color: #EEEEEE;
+}
+
+.darkmode .navbar a{
+  color: #E7F6F2;
+}
+
+.darkmode .recent-blog-posts .post-box .post-title{
+  color: #E7F6F2;
+}
+
+.darkmode .recent-blog-posts .post-box p{
+  color: #EEEEEE;
+}
+
+.darkmode .featured-services .service-item h4 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #1B2430;
+}
+
+.darkmode .featured-services .service-item p {
+  color: var(--color-secondary-dark);
+}
+
+.darkmode .cta .container {
+  padding: 80px;
+  background: white;
+  border-radius: 15px;
+}
+
+label{
+  color: rgba(var(--color-secondary-dark-rgb), 0.7);
+}
+
+.darkmode label{
+  color: #E7F6F2;
+}
+
+.form-check{
+  cursor: pointer;
+  margin-left: 3.5rem;
+}
+
+#checkbox{
+  width: 50px;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+
