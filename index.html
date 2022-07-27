@@ -37,33 +37,37 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-center">
-
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="/">Home</a></li>
           <li><a class="nav-link scrollto" href="/experience.html">Experience</a></li>
           <li><a class="nav-link scrollto" href="/projects.html">Project</a></li>
           <li><a class="nav-link scrollto" href="/skills.html">Skills</a></li>
-          <li><a class="nav-link scrollto" href="/blog.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#">Blog</a></li>
           <li><a class="nav-link scrollto" href="/contact.html">Hire Me</a></li>
+          <li>
+            <div class="form-check form-switch nav-link scrollto">
+              <input type="checkbox" class="form-check-input" id="checkbox" onclick="setDarkMode()">
+              <label class="custom-control-label mt-1" for="checkbox">Dark</label>
+            </div>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
-
     </div>
   </header><!-- End Header -->
 
-  <section id="hero-animated" class="hero-animated d-flex align-items-center mt-auto">
+  <section id="hero-animated" class=" d-flex align-items-center mt-5">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
       data-aos="zoom-out">
-      <img src="assets/img/laiq.jpg" class="animated" style="border-radius: 50%" height="200px">
-      <h1 class="text-secondary" style="font-size: 48px;
-      font-weight: 700;">Ahmad Nurul Laiq</h1>
-      <h4 class="text-dark">Web Developer</h4>
-      <p>An Computer Science Student who loves to create and share projects about web and mobile technology! I've
+      <img src="assets/img/laiq.jpg" class="animated"
+        style="border-radius: 50%; animation: up-down 2s ease-in-out infinite alternate-reverse both;" height="200px">
+      <h1>Ahmad Nurul Laiq</h1>
+      <h4>Web Developer</h4>
+      <p>An Computer Science Student who loves to create and share projects about web technology! I've
         enjoyed PHP and Javascript and make it the main language in creating a project.</p>
       <div class="d-flex">
-        <a href="/contact.html" class="btn-get-started scrollto">Know More</a>
+        <a href="/contact.html" class="btn btn-primary">Know More</a>
       </div>
     </div>
   </section>
@@ -80,6 +84,30 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    //save to localstorage
+    if (localStorage.getItem('theme') == 'dark'){
+      setDarkMode();
+
+      if(document.getElementById('checkbox').checked){
+        localStorage.setItem('checkbox', true)
+      }
+    }
+
+    function setDarkMode(){
+      let isDark = document.body.classList.toggle('darkmode');
+
+      if (isDark) {
+        setDarkMode.checked = true;
+        localStorage.setItem('theme', 'dark');
+        document.getElementById('checkbox').setAttribute('checked', 'checked');
+      } else {
+        setDarkMode.checked = true;
+        localStorage.removeItem('theme', 'dark');
+      }
+    }
+  </script>
 </body>
 
 </html>
