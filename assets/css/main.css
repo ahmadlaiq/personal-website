@@ -603,6 +603,7 @@ h4{
 .hero-animated .animated {
   margin-bottom: 60px;
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  -webkit-animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
 @media (min-width: 992px) {
@@ -621,6 +622,12 @@ h4{
   .hero-animated .animated {
     max-width: 80%;
   }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1B2430;
+  }
 }
 
 .hero-animated .btn-get-started {
@@ -633,6 +640,10 @@ h4{
   color: var(--color-white);
   background: var(--color-primary);
   font-family: var(--font-secondary);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .hero-animated .btn-get-started:hover {
